@@ -33,6 +33,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'oauth'
 gem 'discogs-wrapper', :git => 'git://github.com/buntine/discogs.git'
 
 # Use ActiveModel has_secure_password

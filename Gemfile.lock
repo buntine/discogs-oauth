@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/buntine/discogs.git
-  revision: 6c16e615209936e702652edd4cedde569bcac60a
+  revision: ea5ebac1b5c8583cd8228e9367f88f563caf3556
   specs:
     discogs-wrapper (1.4.0)
       hashie (~> 2.1)
@@ -60,6 +60,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.10.0)
+    oauth (0.4.7)
     polyglot (0.3.4)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -125,6 +126,7 @@ DEPENDENCIES
   execjs
   jbuilder (~> 1.2)
   jquery-rails
+  oauth
   rails (= 4.0.2)
   sass-rails (~> 4.0.0)
   sdoc
