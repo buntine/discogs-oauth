@@ -5,4 +5,9 @@
   <li>Add your "Consumer Key" and "Consumer Secret" into controllers/images</li>
 </ul>
 
-<a href="/images/authenticate">Authenticate Discogs.com account</a>
+<% if @discogs.authenticated? %>
+  <a href="/images/R-2983964-1310391145.png">View image</a>
+  <a href="/images/whoami">User information</a>
+<% else %>
+  <a href="/images/authenticate">Authenticate Discogs.com account</a>
+<% end %>

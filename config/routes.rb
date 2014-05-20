@@ -6,6 +6,7 @@ DiscogsOauth::Application.routes.draw do
     collection do
       get :authenticate
       get :callback
+      get :whoami
     end
   end
 
