@@ -6,9 +6,10 @@ class ImagesController < ApplicationController
   def authenticate
     @discogs = Discogs::Wrapper.new("Test OAuth")
 
-    request_data = @discogs.get_request_token("nLPklPRYpykkjycrkunw",
-                      "fjshPFKjzHUQeFqsjyeWBnmLAnOixRgJ",
-                      "http://127.0.0.1:3000/images/callback")
+    app_key      = "nLPklPRYpykkjycrkunw"
+    app_secret   = "fjshPFKjzHUQeFqsjyeWBnmLAnOixRgJ"
+    request_data = @discogs.get_request_token(app_key, app_secret,
+                     "http://127.0.0.1:3000/images/callback")
 
     session[:request_token] = request_data[:request_token]
  
