@@ -38,7 +38,7 @@ class ImagesController < ApplicationController
   end
 
   def whoami
-    @user = @discogs.get_user_identity
+    @user = @discogs.get_identity
   end
 
 end
