@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/buntine/discogs.git
-  revision: aa10ff87473fae76629ca295cc6095288b89785a
+  revision: 4c1876504466eae9a47873061ff9eaf4f8b4b4b8
   specs:
     discogs-wrapper (1.4.0)
       hashie (~> 2.1)

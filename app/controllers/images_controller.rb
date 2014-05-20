@@ -30,15 +30,26 @@ class ImagesController < ApplicationController
   end
 
   def show
-    @image = @discogs.get_image(params[:id])
+    image = @discogs.get_image(params[:id])
 
-    send_data(@image,
+    send_data(image,
       :disposition => "inline",
       :type => "image/jpeg")
   end
 
   def whoami
     @user = @discogs.get_identity
+  end
+
+  def add_want
+    release_id = "2489281"
+    notes      = "Added via the Discogs Ruby Gem. But, you *DO* want it now!!"
+    rating     = 5
+
+    @user     = @discogs.get_identity
+    @response = @discogs.add_release_to_user_wantlist(@user.username,
+                  release_id,
+                  {:notes => notes, :rating => rating})
   end
 
 end
