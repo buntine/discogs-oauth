@@ -33,7 +33,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'oauth'
 gem 'discogs-wrapper', :git => 'git://github.com/buntine/discogs.git'
 
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
