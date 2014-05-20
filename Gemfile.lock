@@ -5,6 +5,15 @@ GIT
     discogs-wrapper (1.4.0)
       hashie (~> 2.1)
 
+GIT
+  remote: git://github.com/rails/activerecord-session_store.git
+  revision: e879bf087eb684452aaddb734efa20b95588b141
+  specs:
+    activerecord-session_store (0.1.0)
+      actionpack (>= 4.0.0, < 5)
+      activerecord (>= 4.0.0, < 5)
+      railties (>= 4.0.0, < 5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -121,6 +130,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-session_store!
   coffee-rails (~> 4.0.0)
   discogs-wrapper!
   execjs

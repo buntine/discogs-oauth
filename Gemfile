@@ -36,6 +36,8 @@ end
 gem 'oauth'
 gem 'discogs-wrapper', :git => 'git://github.com/buntine/discogs.git'
 
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

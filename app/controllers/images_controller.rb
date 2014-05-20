@@ -1,31 +1,35 @@
 class ImagesController < ApplicationController
 
-  before_filter do
-    @discogs = Discogs::Wrapper.new("Test OAuth")
-  end
-
   def index
   end
 
   def authenticate
-    @request_data = @discogs.get_request_token("nLPklPRYpykkjycrkunw",
+    @discogs = Discogs::Wrapper.new("Test OAuth")
+
+    request_data = @discogs.get_request_token("nLPklPRYpykkjycrkunw",
                       "fjshPFKjzHUQeFqsjyeWBnmLAnOixRgJ",
                       "http://127.0.0.1:3000/images/callback")
 
-    session[:request_token] = @request_data[:request_token]
+    session[:request_token] = request_data[:request_token]
  
-    redirect_to @request_data[:authorize_url]
+    redirect_to request_data[:authorize_url]
   end
 
   def callback
-    @request_token = session[:request_token]
-    @verifier = params[:oauth_verifier]
+    @discogs = Discogs::Wrapper.new("Test OAuth")
 
-    @discogs.authenticate(@request_token, @verifier)
+    request_token = session[:request_token]
+    verifier = params[:oauth_verifier]
+
+    access_data = @discogs.authenticate(request_token, verifier)
+
+    session[:request_token] = nil
+    session[:access_token] = access_data[:access_token]
   end
 
   def show
-    @image = @discogs.get_image(params[:id])
+    @discogs = Discogs::Wrapper.new("Test OAuth", session[:access_token])
+    @image = @discogs.get_image(params[:id] + ".png")
 
     send_data(@image,
       :disposition => "inline",
