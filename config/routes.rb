@@ -10,6 +10,8 @@ DiscogsOauth::Application.routes.draw do
       get :callback
       get :whoami
       get :add_want
+      get :edit_want
+      get :remove_want
     end
   end
 
