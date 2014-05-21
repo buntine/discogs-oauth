@@ -47,4 +47,4 @@ gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+ gem 'debugger', group: [:development, :test]
