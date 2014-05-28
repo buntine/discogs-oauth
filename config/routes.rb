@@ -2,9 +2,9 @@ DiscogsOauth::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  get 'images/:id' => 'images#show', :constraints  => {:id => /.+\.\w{3,4}/}
+  get 'tests/:id' => 'tests#show', :constraints  => {:id => /.+\.\w{3,4}/}
 
-  resources :images do
+  resources :tests do
     collection do
       get :authenticate
       get :callback
