@@ -1,8 +1,19 @@
-discogs-oauth
-=============
+# discogs-oauth
 
-An example app for authenticating with OAuth using my Discogs library.
+An example app for authenticating with OAuth using my [Discogs library](https://github.com/buntine/discogs).
 
-Start up the server and browse to http://127.0.0.1/tests
+## Getting Started
 
-You can (find the library here)[https://github.com/buntine/discogs].
+Bundle, run the database migrations, start the server and browse to [http://127.0.0.1/tests](http://127.0.0.1/tests).
+
+```
+$ git clone https://github.com/mmwtsn/discogs-oauth.git
+$ cd ./discogs-oauth
+$ bundle install
+$ rake db:migrate
+$ rails server
+```
+
+## License
+
+See the [LICENSE](https://github.com/mmwtsn/discogs-oauth/blob/master/LICENSE) file.
