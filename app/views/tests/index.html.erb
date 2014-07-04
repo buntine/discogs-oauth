@@ -1,8 +1,8 @@
 <ul>
-  <li>Use 127.0.0.1 <strong>not</strong> localhost to prevent session issues</li>
+  <li>Use <a href="http://127.0.0.1:3000/">127.0.0.1</a> <strong>not</strong> localhost to prevent session issues</li>
   <li>Use active_record_store for session/cookies</li>
   <li>Create an app on Discogs.com via your developer settings</li>
-  <li>Add your "Consumer Key" and "Consumer Secret" into controllers/images</li>
+  <li>Add your "Consumer Key" and "Consumer Secret" into /config/environment_variables.yml</li>
 </ul>
 
 <% if @discogs.authenticated? %>
