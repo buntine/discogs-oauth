@@ -24,8 +24,8 @@ To prevent your keys from being tracked by Git and potentially exposed, create a
 # /config/environment_variables.yml
 
 development:
-    DISCOGS_API_KEY:
-    DISCOGS_API_SECRET:
+    DISCOGS_API_KEY: 1234YourKeyHere4321
+    DISCOGS_API_SECRET: 5678YourSecretHere8765
 ```
 
 ## License
