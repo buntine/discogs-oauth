@@ -7,7 +7,7 @@ An example app for authenticating with OAuth using my [Discogs library](https://
 Bundle, run the database migrations, start the server and browse to [http://127.0.0.1/tests](http://127.0.0.1/tests).
 
 ```
-$ git clone https://github.com/mmwtsn/discogs-oauth.git
+$ git clone https://github.com/buntine/discogs-oauth.git
 $ cd ./discogs-oauth
 $ bundle install
 $ rake db:migrate
