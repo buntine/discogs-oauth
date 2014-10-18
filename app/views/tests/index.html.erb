@@ -1,18 +1,18 @@
 <ul>
-  <li>Use 127.0.0.1 <strong>not</strong> localhost to prevent session issues</li>
+  <li>Use <a href="http://127.0.0.1:3000/">127.0.0.1</a> <strong>not</strong> localhost to prevent session issues</li>
   <li>Use active_record_store for session/cookies</li>
   <li>Create an app on Discogs.com via your developer settings</li>
-  <li>Add your "Consumer Key" and "Consumer Secret" into controllers/images</li>
+  <li>Add your "Consumer Key" and "Consumer Secret" into /config/environment_variables.yml</li>
 </ul>
 
 <% if @discogs.authenticated? %>
   <ul>
-    <li><a href="/images/R-2795264-1301352416.jpeg">View image</a></li>
-    <li><a href="/images/whoami">User information</a></li>
-    <li><a href="/images/add_want">Add 'Medieval Steel' to wantlist</a></li>
-    <li><a href="/images/edit_want">Edit 'Medieval Steel' in wantlist</a></li>
-    <li><a href="/images/remove_want">Remove 'Medieval Steel' from wantlist</a></li>
+    <li><a href="/tests/R-2795264-1301352416.jpeg">View image</a></li>
+    <li><a href="/tests/whoami">User information</a></li>
+    <li><a href="/tests/add_want">Add 'Medieval Steel' to wantlist</a></li>
+    <li><a href="/tests/edit_want">Edit 'Medieval Steel' in wantlist</a></li>
+    <li><a href="/tests/remove_want">Remove 'Medieval Steel' from wantlist</a></li>
   </ul>
 <% else %>
-  <a href="/images/authenticate">Authenticate Discogs.com account</a>
+  <a href="/tests/authenticate">Authenticate Discogs.com account</a>
 <% end %>

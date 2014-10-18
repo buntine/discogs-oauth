@@ -8,8 +8,8 @@ class TestsController < ApplicationController
   end
 
   def authenticate
-    app_key      = "YOUR_CONSUMER_KEY"
-    app_secret   = "YOUR_CONSUMER_SECRET"
+    app_key      = ENV["DISCOGS_API_KEY"]
+    app_secret   = ENV["DISCOGS_API_SECRET"]
     request_data = @discogs.get_request_token(app_key, app_secret,
                      "http://127.0.0.1:3000/tests/callback")
 

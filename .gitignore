@@ -16,3 +16,6 @@
 /tmp
 
 *.swp
+
+# Ignore Discogs API Key and Secret
+/config/environment_variables.yml
