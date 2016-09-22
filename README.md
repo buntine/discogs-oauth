@@ -9,6 +9,7 @@ Bundle, run the database migrations, start the server and browse to [http://127.
 ```
 $ git clone https://github.com/buntine/discogs-oauth.git
 $ cd ./discogs-oauth
+$ ### Create your ./config/environment_variables.yml file (see below)
 $ bundle install
 $ rake db:migrate
 $ rails server
@@ -21,7 +22,7 @@ Many of Discog's API endpoints require authentication through OAuth. In order to
 To prevent your keys from being tracked by Git and potentially exposed, create a `environment_variables.yml` file inside the `/config` directory. This file has been added to the example app's `.gitignore` file and its contents [will be accessible](https://github.com/buntine/discogs-oauth/blob/master/app/controllers/tests_controller.rb#L11-L12) by the tests controller when you start the server.
 
 ```
-# /config/environment_variables.yml
+# ./config/environment_variables.yml
 
 development:
     DISCOGS_API_KEY:
