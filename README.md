@@ -4,7 +4,7 @@ An example app for authenticating with OAuth using my [Discogs library](https://
 
 ## Getting Started
 
-Bundle, run the database migrations, start the server and browse to [http://127.0.0.1/tests](http://127.0.0.1/tests).
+Bundle, run the database migrations, start the server and browse to [http://127.0.0.1:3000/tests](http://127.0.0.1:3000/tests).
 
 ```
 $ git clone https://github.com/buntine/discogs-oauth.git
